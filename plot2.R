@@ -22,8 +22,10 @@ data$Global_active_power[data$Global_active_power == '?'] <- NA
 # Plot the data as required
 print('Plotting data...')
 
+# Plot on the PNG file device
 png("plot2.png", width = 480, height = 480)
 
+# Ensure the correct layout
 par(mfrow = c(1,1))
 
 plot(data$DateAndTime, data$Global_active_power, type = 'l', xlab = '', ylab = 'Global Active Power (kilowatts)')

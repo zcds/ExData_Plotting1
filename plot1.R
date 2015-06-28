@@ -21,8 +21,10 @@ data$Global_active_power[data$Global_active_power == '?'] <- NA
 # Plot the data as required
 print("Plotting data...")
 
+# Plot on the PNG file device
 png("plot1.png", width = 480, height = 480)
 
+# Ensure the correct layout
 par(mfrow = c(1,1))
 
 hist(df$Global_active_power, main = 'Global Active Power', col = 'red', xlab = 'Global Active Power (kilowatts)', ylab = 'Frequency')
